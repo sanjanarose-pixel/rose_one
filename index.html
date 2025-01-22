@@ -63,4 +63,128 @@
             margin: 1rem;
             width: 300px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-alig
+            text-align: center;
+        }
+
+        .content div h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #FF6347; /* Tomato Red */
+        }
+
+        .content div p {
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            color: #2E8B57; /* Sea Green */
+        }
+
+        .content div a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content div a:hover {
+            color: #FF6347;
+        }
+
+        /* Adding wave icon for beach theme */
+        .content div::before {
+            content: url('https://img.icons8.com/ios/452/wave.png');
+            display: block;
+            margin: 0 auto 1rem;
+            width: 40px;
+            opacity: 0.7;
+        }
+
+        footer {
+            background-color: #FFD700; /* Golden */
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 1.2rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content div {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .content div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Sanjana Sujith</h1>
+        <p>First Year Artificial Intelligence Student at MITS, Puthencurz</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <!-- About Me -->
+        <div>
+            <h3>About Me</h3>
+            <p>I’m a first-year AI student at MITS, Puthencurz. Despite the challenges, I push through to grow and learn each day.</p>
+        </div>
+
+        <!-- Skills -->
+        <div>
+            <h3>Skills</h3>
+            <p>I’m passionate about programming and problem-solving, and I’ve started learning Python and Java. I also excel in team leading and retaining information.</p>
+        </div>
+
+        <!-- Languages -->
+        <div>
+            <h3>Languages</h3>
+            <p>I am fluent in English, Hindi, French, and Malayalam.</p>
+        </div>
+
+        <!-- Hackathon -->
+        <div>
+            <h3>Upcoming Hackathon</h3>
+            <p>I’m attending my first hackathon, Tink Her Hack, hosted by Tinkerhub, next month. Excited to gain exposure to coding and technology!</p>
+        </div>
+
+        <!-- Hobbies -->
+        <div>
+            <h3>Hobbies</h3>
+            <p>I enjoy cooking simple desserts, reading novels on weekends, and singing Taylor Swift songs.</p>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3>Contact</h3>
+            <p>Phone: <a href="tel:+918105157710">8105157710</a></p>
+            <p>Email: <a href="mailto:sanjana.sind@gmail.com">sanjana.sind@gmail.com</a></p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Sanjana Sujith. All rights reserved.</p>
+    </footer>
+</body>
+</html>
