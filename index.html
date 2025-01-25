@@ -3,189 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sanjana Sujith - Personal Website</title>
-    <style>
-        /* Resetting default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background: #87CEEB; /* Sky Blue */
-            color: #333;
-        }
-
-        header {
-            background: #FFD700; /* Golden */
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 5px solid #FF8C00; /* Dark Orange */
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Wave and Shell background */
-        header::before {
-            content: "🦪";
-            display: block;
-            margin: 1rem auto;
-            font-size: 40px;
-            opacity: 0.7;
-        }
-
-        /* Main content area */
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 3rem;
-            background: linear-gradient(to bottom, #00BFFF, #87CEFA); /* Ocean Blue Gradient */
-        }
-
-        .content div {
-            background-color: #ffffff;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 1rem 0;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        .content div h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: #FF6347; /* Tomato Red */
-        }
-
-        .content div p {
-            font-size: 1rem;
-            margin-bottom: 1.2rem;
-            color: #2E8B57; /* Sea Green */
-        }
-
-        .content div a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .content div a:hover {
-            color: #FF6347;
-        }
-
-        /* Adding wave icon for beach theme */
-        .content div::before {
-            content: "🌊";
-            display: block;
-            margin: 0 auto 1rem;
-            font-size: 40px;
-            opacity: 0.7;
-        }
-
-        footer {
-            background-color: #FFD700; /* Golden */
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            font-size: 1.2rem;
-        }
-
-        footer p {
-            font-size: 1rem;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .content div {
-                width: 90%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2.2rem;
-            }
-
-            .content div {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>FitBuddy - Your Personal Trainer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Sanjana Sujith</h1>
-        <p>First Year Artificial Intelligence Student at MITS, Puthencurz</p>
+        <h1>Welcome to FitBuddy!</h1>
+        <p>Your personal fitness coach is ready to help you reach your goals.</p>
     </header>
 
-    <!-- Main Content Section -->
-    <div class="content">
-        <!-- About Me -->
-        <div>
-            <h3>🦪 About Me 🦪</h3>
-            <p>I’m a first-year AI student at MITS, Puthencurz. Despite the challenges, I push through to grow and learn each day.</p>
-        </div>
+    <!-- Profile Setup Form -->
+    <section id="profile-setup">
+        <h2>Create Your Profile</h2>
+        <form id="profile-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
 
-        <!-- Skills -->
-        <div>
-            <h3>🦪 Skills 🦪</h3>
-            <p>I’m passionate about programming and problem-solving, and I’ve started learning Python and Java. I also excel in team leading and retaining information.</p>
-        </div>
+            <label for="fitness-goal">Fitness Goal:</label>
+            <select id="fitness-goal">
+                <option value="weight-loss">Weight Loss</option>
+                <option value="muscle-gain">Muscle Gain</option>
+                <option value="endurance">Endurance</option>
+            </select>
 
-        <!-- Languages -->
-        <div>
-            <h3>🦪 Languages 🦪</h3>
-            <p>I am fluent in English, Hindi, French, and Malayalam.</p>
-        </div>
+            <label for="workout-days">How many days a week can you work out?</label>
+            <input type="number" id="workout-days" min="1" max="7" required>
 
-        <!-- Hackathon -->
-        <div>
-            <h3>🦪 Upcoming Hackathon 🦪</h3>
-            <p>I’m attending my first hackathon, Tink Her Hack, hosted by Tinkerhub, next month. Excited to gain exposure to coding and technology!</p>
-        </div>
+            <button type="submit">Start My Plan</button>
+        </form>
+    </section>
 
-        <!-- Hobbies -->
-        <div>
-            <h3>🦪 Hobbies 🦪</h3>
-            <p>I enjoy cooking simple desserts, reading novels on weekends, and singing Taylor Swift songs.</p>
-        </div>
+    <!-- Cartoon Character -->
+    <section id="cartoon-character">
+        <img src="cartoon_character.png" alt="Cartoon Character" id="character">
+        <div id="dialogue"></div>
+    </section>
 
-        <!-- Contact -->
-        <div>
-            <h3>🦪 Contact 🦪</h3>
-            <p>Phone: <a href="tel:+918105157710">8105157710</a></p>
-            <p>Email: <a href="mailto:sanjana.sind@gmail.com">sanjana.sind@gmail.com</a></p>
-        </div>
-    </div>
+    <section id="workout-plan">
+        <h2>Your Workout Plan</h2>
+        <div id="workout-details"></div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Sanjana Sujith. All rights reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #5c6bc0;
+    color: white;
+}
+
+#profile-setup {
+    text-align: center;
+    margin-top: 20px;
+}
+
+label, input, select, button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f4b82;
+}
+
+#cartoon-character {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#cartoon-character img {
+    width: 150px;
+    height: auto;
+}
+
+#dialogue {
+    margin-left: 20px;
+    font-size: 18px;
+    color: #5c6bc0;
+    font-weight: bold;
+}
+// Handling Profile Setup and Cartoon Interaction
+document.getElementById('profile-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get user inputs
+    const name = document.getElementById('name').value;
+    const fitnessGoal = document.getElementById('fitness-goal').value;
+    const workoutDays = document.getElementById('workout-days').value;
+
+    // Character speaks based on inputs
+    let greetingMessage = `Hi ${name}, let's get started!`;
+    let goalMessage = '';
+
+    switch(fitnessGoal) {
+        case 'weight-loss':
+            goalMessage = "You’re going to crush those cardio workouts!";
+            break;
+        case 'muscle-gain':
+            goalMessage = "Time to build some muscle with strength training!";
+            break;
+        case 'endurance':
+            goalMessage = "Let’s focus on increasing your endurance with some awesome routines!";
+            break;
+    }
+
+    document.getElementById('dialogue').innerText = `${greetingMessage} ${goalMessage} You have ${workoutDays} days to work out each week.`;
+
+    // Generate Workout Plan (simple example)
+    generateWorkoutPlan(fitnessGoal, workoutDays);
+});
+
+function generateWorkoutPlan(goal, days) {
+    const planElement = document.getElementById('workout-details');
+    let workoutPlan = '';
+    
+    if (goal === 'weight-loss') {
+        workoutPlan = `Workout Plan: \n- Cardio (Running, Cycling, HIIT)\n- ${days} Days per Week`;
+    } else if (goal === 'muscle-gain') {
+        workoutPlan = `Workout Plan: \n- Strength Training (Squats, Deadlifts, Bench Press)\n- ${days} Days per Week`;
+    } else if (goal === 'endurance') {
+        workoutPlan = `Workout Plan: \n- Endurance Training (Long Runs, Cycling)\n- ${days} Days per Week`;
+    }
+
+    planElement.innerText = workoutPlan;
+}
